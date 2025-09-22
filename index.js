@@ -35,6 +35,7 @@ server.use('/uploads',imageRouter.router);
 server.use('/bill',billRouter.router);
 server.use('/sms',smsrouter.router);
 
-server.listen(8080 ,()=>{
-    console.log('Server Start');
-})
+const PORT = process.env.PORT || 8080;
+server.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});

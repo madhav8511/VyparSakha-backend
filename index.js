@@ -22,7 +22,7 @@ server.use(express.json({  extended: true }));
 server.use(express.urlencoded({  extended: true }));
 server.use(morgan('default'));
 server.use(express.static('public'));
-server.use(cors());
+server.use(cors({ origin: "https://vypar-sakha-frontend.vercel.app/" }));
 
 server.get('/',(req,res)=>{
     res.send("Hello World");
@@ -37,4 +37,4 @@ server.use('/sms',smsrouter.router);
 
 server.listen(8080 ,()=>{
     console.log('Server Start');
-});
+})

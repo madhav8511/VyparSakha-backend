@@ -12,7 +12,7 @@ const smsrouter = require('./routes/sms');
 
 main().catch(err => console.log(err));
 async function main() {
-  await mongoose.connect(`${process.env.LOCAL_DATABASE}`);
+  await mongoose.connect(`${process.env.CLOUD_DATABASE}`);
   console.log('Database Connected');
 }
 

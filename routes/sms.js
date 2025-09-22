@@ -14,7 +14,7 @@ router.post('/send-sms', (req, res) => {
     // Send SMS using Twilio
     client.messages
       .create({
-        body: `Hi, This is a gentle remainder that you have to a sum of Rs. ${amount} to Ganapati General Store as your left out balance`,   // The message content
+        body: `Hi, This is a gentle remainder that you have to pay a sum of Rs. ${amount} to Ganapati General Store as your left out balance`,   // The message content
         from: `${process.env.TWILIO_NUMBER}`,  // Your Twilio phone number (Replace with your Twilio number)
         to: to
       })
